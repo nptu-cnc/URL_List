@@ -1,7 +1,7 @@
 let tba = document.querySelector('div');
 
 async function getData() {
-    let resp = await fetch('https://raw.githubusercontent.com/nptu-cnc/URL_List/main/scene.json', {
+    let resp = await fetch('https://raw.githubusercontent.com/nptu-cnc/URL_List/main/data.json', {
         method: 'GET',
     });
     let data = await resp.json();
@@ -22,8 +22,9 @@ async function getData() {
     let insertTb = "";
     let name = []
     let data = await getData();
+    console.log(data);
     for (let item of data) {
-        if (!String(item[0]).includes("end")) {
+        if (!String(item[0]).includes("unit")) {
             insertTb = `
             <tr class="${item[0]}">
                 <td class="serise-number">${item[1]}</td>
@@ -54,7 +55,6 @@ async function getData() {
                 ;
         }
         table += insertTb;
-
     }
     tba.insertAdjacentHTML('beforeend', table);
     table += `</tbody></table>`;
