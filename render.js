@@ -1,4 +1,4 @@
-let tba = document.querySelector('div');
+let tba = document.querySelector('div.table-responsive');
 
 async function getData() {
     let resp = await fetch('https://raw.githubusercontent.com/nptu-cnc/URL_List/main/data.json', {
@@ -22,7 +22,6 @@ async function getData() {
     let insertTb = "";
     let name = []
     let data = await getData();
-    console.log(data);
     for (let item of data) {
         if (!String(item[0]).includes("unit")) {
             insertTb = `
@@ -58,10 +57,32 @@ async function getData() {
     }
     tba.insertAdjacentHTML('beforeend', table);
     table += `</tbody></table>`;
-
+    hide()
     return 0;
 })()
 
+
+function dw(obj) {
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+    var dlAnchorElem = document.getElementById('downloadAnchorElem');
+    dlAnchorElem.setAttribute("href", dataStr);
+    dlAnchorElem.setAttribute("download", "scene.json");
+    dlAnchorElem.click();
+
+}
+let private
+function hide() {
+
+    let url = new URL(location.href);
+    let onlylink = url.searchParams.get("o");
+    console.log("onlylink", onlylink);
+    if (onlylink == 1) {
+        private = document.getElementsByClassName("private");
+        for (let i = 0; i < private.length; i++) {
+            private[i].setAttribute("style", "display:none;")
+        }
+    }
+}
 
 /*
 let x = document.querySelectorAll('tr');
