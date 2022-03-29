@@ -75,7 +75,6 @@ function hide() {
 
     let url = new URL(location.href);
     let onlylink = url.searchParams.get("o");
-    console.log("onlylink", onlylink);
     if (onlylink == 1) {
         private = document.getElementsByClassName("private");
         for (let i = 0; i < private.length; i++) {
@@ -83,6 +82,20 @@ function hide() {
         }
     }
 }
+document.addEventListener('keypress', e => {
+
+    console.log(e.key);
+    if (e.key == 'o') {
+        private = document.getElementsByClassName("private");
+        for (let i = 0; i < private.length; i++) {
+            private[i].setAttribute("style", "display:none;")
+        }
+    }
+    else if(e.key == 'h'){
+       document.location.reload();
+    }
+
+});
 
 /*
 let x = document.querySelectorAll('tr');
