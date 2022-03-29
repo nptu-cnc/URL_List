@@ -28,7 +28,7 @@ async function getData() {
             <tr class="${item[0]}">
                 <td class="serise-number">${item[1]}</td>
                 <td class="site-Name">${item[2]}</td>
-                <td class="new-link"><a href="https://${item[3]}" target="_blank">${item[2]}</a></td>
+                <td class="new-link"><a href="https://${item[3]}" target="_blank">${item[3]}</a></td>
                 <td class="Name private">${item[4]}</td>
                 <td class="mail private">${item[5]}</td>
                 <td class="phone-num private">${item[6]}</td>
@@ -54,7 +54,6 @@ async function getData() {
                 ;
         }
         table += insertTb;
-        console.log(insertTb);
 
     }
     tba.insertAdjacentHTML('beforeend', table);
@@ -73,7 +72,15 @@ for(let i of x){
     if( i.firstElementChild.nodeName == 'TD' && i.className.includes("site-tb")){
         temp[count].push(i.className)
         for(let j of i.children){
-            temp[count].push(j.innerHTML);
+            
+            if(j.className.includes("new-link")){
+                temp[count].push(j.textContent);
+                console.log("hi")
+            }
+            else{
+                temp[count].push(j.innerHTML);
+
+            }
         }
         count++;
     }
