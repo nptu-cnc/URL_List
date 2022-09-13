@@ -4,50 +4,86 @@
 <head>
 
 </head>
+
 <body>
-    <a id="downloadAnchorElem" style="display:none"></a>
+
+    <script src="./vue.global.min.js"></script>
+    <div id="data-mount" class="container">
+       <div class="col-lg-12" v-for="row in jsonData">
+           <div class="row" style="text-align:center;font-size:1.5em;margin:10px;">
+               {{row.unit}}
+           </div>
+           <div class="row-cnc title">
+               <div class="serial">序號</div>
+               <div class="siteName">網站名稱</div>
+               <div class="siteURL">RPAGE網址</div>
+               <div class="name" v-if="show">網站負責人</div>
+               <div class="email" v-if="show">Email</div>
+               <div class="phone" v-if="show">分機</div>
+               <div class="note">備註</div>
+           </div>
+           <div v-for="(site,siteIndex) in row.site">
+               <div class="row-cnc" :class="site[0]">
+                   <div class="serial">{{site[1]}}</div>
+                   <div class="siteName">{{site[2]}}</div>
+                   <div class="siteURL">
+                      <a :href="'https://'+site[3]">
+                         {{site[3]}}
+                      </a>
+                   </div>
+                   <div class="name" v-if="show">
+                       <div v-for="name in site[4]">
+                           {{name}}
+                       </div>
+                   </div>
+                   <div class="email" v-if="show">
+                       <div v-for="email in site[5]">
+                           {{email}}
+                       </div>
+                   </div>
+                   <div class="phone" v-if="show">
+                       <div v-for="phone in site[6]">
+                           {{phone}}
+                       </div>
+                   </div>
+                   <div class="note">{{site[7]}}</div>
+               </div>
+           </div>
+    
+       </div>
+    </div>
     <style>
-        tr {
-            height: 50px;
-
-        }
-
-        th {
-            background-color: #D4E5EF;
-        }
-
-        tr.m-site {
-            background-color: #fff5d7;
-        }
-
-        .unit {
-            text-align: center;
-            font-size: 32px;
-        }
+       .row-cnc{
+          display: flex;
+       }
+       .title div{
+          background-color: #D4E5EF;
+       }
+       .serial,.name,.siteName,.email,.siteURL,.phone,.note{
+          padding: 5px;
+          border: 1px solid black;
+       }
+       .name,.phone{
+          width: 10%;
+       }
+       .siteName,.siteURL{
+          width: 20%;
+       }
+       .phone{
+          text-align: center;
+       }
+       .email{
+          width:25%;
+       }
+       .serial,.note{
+          text-align: center;
+          width:5%
+       }
+       .m-site div{
+          background-color: #fff5d7;
+       }
     </style>
-    <div class="table-responsive"></div>
-    <script src="./render.js"></script>
-    <script>
-        function dw(obj) {
-            var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
-            var dlAnchorElem = document.getElementById('downloadAnchorElem');
-            dlAnchorElem.setAttribute("href", dataStr);
-            dlAnchorElem.setAttribute("download", "scene.json");
-            dlAnchorElem.click();
-
-        }
-        new function () {
-
-            let url = new URL(location.href);
-            let onlylink = url.searchParams.get("o");
-            if (onlylink == 1) {
-                let private = document.getElementsByClassName("private");
-                for (let i = 0; i < private.length; i++) {
-                    private[i].setAttribute("style", "display:none;")
-                }
-            }
-        }
-    </script>
+    <script type="module" src="./render.js"></script>
 </body>
 
 </html>
