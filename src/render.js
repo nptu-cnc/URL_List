@@ -10,7 +10,7 @@ const list = {
         }
     },
     async created() {
-        let data = await fetch('https://raw.githubusercontent.com/nptu-cnc/URL_List/main/maintainer.json')
+        let data = await fetch('https://raw.githubusercontent.com/nptu-cnc/URL_List/main/src/maintainer.json')
         this.jsonData = await data.json();
         console.log("Created")
         let url = new URL(location.href);
