@@ -3,10 +3,11 @@ const list = {
     data() {
         return {
             test: "Hello World",
-            initial:false,
+            initial: false,
             isClick: [],
             jsonData: [],
-            show:true
+            show: true,
+            keyword: ""
         }
     },
     async created() {
@@ -18,7 +19,14 @@ const list = {
         if (onlylink == 1) {
             this.show = false;
         }
-        
     },
+    methods: {
+        search() {
+            let search = document.querySelector("#search");
+            this.keyword = search.value;
+        }
+    }
 }
+
+
 Vue.createApp(list).mount('#data-mount');

@@ -1,8 +1,16 @@
-<script src="/var/file/7/1007/img/4375/vue.global.min.js"></script>
+<p>網站負責人若有異動，請填寫
+   <a href="https://cnc.nptu.edu.tw/p/423-1007-1571.php?Lang=zh-tw" target="_blank" title="負責人更新">
+      <span style="color:#2980b9;">
+         此表單回報
+      </span>
+   </a>
+</p>
+
 <div id="data-mount" class="container">
-   <div class="col-lg-12" v-for="row in jsonData">
-      <div class="row" style="text-align:center;font-size:1.5em;margin:10px;">
-         {{row.unit}}
+   <div class="col-lg-12" v-for="(row,rowIndex) in jsonData">
+       <div class="row" style="text-align:center;font-size:1.5em;margin:10px;">
+           {{row.unit}}
+           <input id="search"  placeholder="Search" type="text" @input="search()" v-if="rowIndex==0" >
       </div>
       <div class="row-cnc title">
          <div class="serial">序號</div>
@@ -14,7 +22,7 @@
          <div class="note">備註</div>
       </div>
       <div v-for="(site,siteIndex) in row.site">
-         <div class="row-cnc" :class="site[0]">
+         <div class="row-cnc" :class="site[0]" v-if="site[2].includes(keyword)">
             <div class="serial">{{site[1]}}</div>
             <div class="siteName">{{site[2]}}</div>
             <div class="siteURL">
@@ -44,51 +52,42 @@
    </div>
 </div>
 <style>
+   #search{
+      font-size: 0.5em;
+      border: none;
+      border-bottom: 1px solid;
+      float: right;
+   }
    .row-cnc {
       display: flex;
    }
-
    .title div {
       background-color: #D4E5EF;
    }
-
-   .serial,
-   .name,
-   .siteName,
-   .email,
-   .siteURL,
-   .phone,
-   .note {
+   .serial,.name,.siteName,.email,.siteURL,.phone,.note {
       padding: 5px;
       border: 1px solid black;
    }
-
-   .name,
-   .phone {
+   .name,.phone {
       width: 10%;
    }
-
-   .siteName,
-   .siteURL {
+   .siteName,.siteURL {
       width: 20%;
    }
-
    .phone {
       text-align: center;
    }
-
    .email {
       width: 25%;
    }
-
-   .serial,
-   .note {
+   .serial,.note {
       text-align: center;
       width: 5%
    }
-
    .m-site div {
       background-color: #fff5d7;
    }
 </style>
+
+<script src="/var/file/7/1007/img/4375/vue.global.min.js"></script>
 <script type="module" src="/var/file/7/1007/img/4375/render.js"></script>
