@@ -7,20 +7,42 @@
 </p>
 
 <div id="data-mount" class="container">
+   <!--
+      v-for="(row,rowIndex) in jsonData"
+      讀取jsonData中的資料並且將資料放入row中
+      此處的row.unit可對應到maintainer.json中的unit
+   -->
    <div class="col-lg-12" v-for="(row,rowIndex) in jsonData">
-       <div class="row" style="text-align:center;font-size:1.5em;margin:10px;">
-           {{row.unit}}
-           <input id="search"  placeholder="Search" type="text" @input="search()" v-if="rowIndex==0" >
+      <div class="row" style="text-align:center;font-size:1.5em;margin:10px;">
+         {{row.unit}}
+         <!--
+            此處的v-if="rowIndex==0"是用來判斷是否為第一筆資料
+            用意為讓search的textarea只出現在最上方
+         -->
+         <input id="search" placeholder="Search" type="text" @input="search()" v-if="rowIndex==0">
       </div>
       <div class="row-cnc title">
          <div class="serial">序號</div>
          <div class="siteName">網站名稱</div>
          <div class="siteURL">RPAGE網址</div>
+         <!--
+            這裡的v-if的作用是當網址中出現了o=1時，會將show=false的資料隱藏
+         -->
          <div class="name" v-if="show">網站負責人</div>
          <div class="email" v-if="show">Email</div>
          <div class="phone" v-if="show">分機</div>
          <div class="note">備註</div>
       </div>
+      <!--
+         v-for="(site,siteIndex) in row.site"
+         是用來讀取學術、行政、其他單位site array中的資料，
+         並在其後將資料mapping到html中。
+         ---------------------------------------------
+         v-if="site[2].includes(keyword)"
+         是用來判斷site[2]也就是網站名稱中是否包含keyword，
+         如果是的話將顯示該筆資料並隱藏未包含keyword的資料。
+         (This function is for search)
+      -->
       <div v-for="(site,siteIndex) in row.site">
          <div class="row-cnc" :class="site[0]" v-if="site[2].includes(keyword)">
             <div class="serial">{{site[1]}}</div>
@@ -30,6 +52,11 @@
                   {{site[3]}}
                </a>
             </div>
+            <!--
+               v-for="name in site[4]"
+               由於網站負責人可能有多人，
+               所以這裡使用v-for來讀取site[4]中的資料，並將其輸出至html中。
+            -->
             <div class="name" v-if="show">
                <div v-for="name in site[4]">
                   {{name}}
@@ -51,39 +78,58 @@
 
    </div>
 </div>
+
 <style>
-   #search{
+   #search {
       font-size: 0.5em;
       border: none;
       border-bottom: 1px solid;
       float: right;
    }
+
    .row-cnc {
       display: flex;
    }
+
    .title div {
       background-color: #D4E5EF;
    }
-   .serial,.name,.siteName,.email,.siteURL,.phone,.note {
+
+   .serial,
+   .name,
+   .siteName,
+   .email,
+   .siteURL,
+   .phone,
+   .note {
       padding: 5px;
       border: 1px solid black;
    }
-   .name,.phone {
+
+   .name,
+   .phone {
       width: 10%;
    }
-   .siteName,.siteURL {
+
+   .siteName,
+   .siteURL {
       width: 20%;
    }
+
    .phone {
       text-align: center;
    }
+
    .email {
       width: 25%;
    }
-   .serial,.note {
+
+   .serial,
+   .note {
       text-align: center;
       width: 5%
    }
+
    .m-site div {
       background-color: #fff5d7;
    }

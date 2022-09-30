@@ -1,4 +1,15 @@
 # URL_LIST
+## 目錄
+
+* [maintainer.json](#maintainerjson)
+    * [格式](#格式)
+    * [更新網站內容](#更新網站內容)
+        * [新增](#新增)
+        * [刪除](#刪除)
+* [component.html](#componenthtml)
+* [render.js](#renderjs)
+* [vue.global.min.js](#vueglobalminjs)
+
 ## maintainer.json
 
 ### 格式
@@ -105,3 +116,10 @@
 ]
 ```
 ![1](./image/images.gif)
+
+## component.html
+component.html是vue.js用來生成前端html時所需要的程式碼。
+## render.js
+render.js是vue.js在執行過程中用來配置資源的controller，此架構為常見的MVC架構，也就是Model、View、Controller。
+## vue.global.min.js
+vue.global.min.js為vue.js的本體，此檔案為經編譯及最小化後的js檔。
