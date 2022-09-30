@@ -1,6 +1,7 @@
 # URL_LIST
-## 格式
-maintainer.json的格式為
+## maintainer.json
+
+### 格式
 
 一個Array內包著三個不同種單位的Dictionary，而Dictionary內有兩個key分別為`unit`及`site`。`unit`標示為何種單位，而`site`則是一個含有該單位所有網站的Array。
 
@@ -41,8 +42,8 @@ maintainer.json的格式為
     .
 ]
 ```
-## 更新網站內容
-### 新增
+### 更新網站內容
+#### 新增
 如果需要新增網站的話，將資料照一下格式填入並放置在正確的位置即可。
 ```json
 [
@@ -56,7 +57,7 @@ maintainer.json的格式為
     "備註內容"
 ],
 ```
-### 刪除
+#### 刪除
 如需從以下內容中刪除序號為E002的網站資料，只需選去整個E002的陣列將其刪除即可。
 ```JSON
 [
