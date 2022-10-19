@@ -19,7 +19,7 @@
             此處的v-if="rowIndex==0"是用來判斷是否為第一筆資料
             用意為讓search的textarea只出現在最上方
          -->
-         <input id="search" placeholder="Search" type="text" @input="search()" v-if="rowIndex==0">
+         <input id="search" placeholder="Search" type="text" v-model.value="keyword" v-if="rowIndex==0">
       </div>
       <div class="row-cnc title">
          <div class="serial">序號</div>
@@ -44,7 +44,7 @@
          (This function is for search)
       -->
       <div v-for="(site,siteIndex) in row.site">
-         <div class="row-cnc" :class="site[0]" v-if="site[2].includes(keyword)">
+         <div class="row-cnc" :class="site[0]" v-if="showRow(site)">
             <div class="serial">{{site[1]}}</div>
             <div class="siteName">{{site[2]}}</div>
             <div class="siteURL">
@@ -108,12 +108,12 @@
 
    .name,
    .phone {
-      width: 10%;
+      min-width: 6em;
    }
 
    .siteName,
    .siteURL {
-      width: 20%;
+      min-width: 15em;
    }
 
    .phone {
@@ -121,17 +121,28 @@
    }
 
    .email {
-      width: 25%;
+      width: 15em;
+      min-width: 15.5em;
    }
 
    .serial,
    .note {
       text-align: center;
-      width: 5%
+      min-width: 4em;
    }
 
    .m-site div {
       background-color: #fff5d7;
+   }
+
+   @media only screen and (max-width: 1024px) {
+      #data-mount {
+         overflow-x: scroll;
+      }
+
+      #data-mount::-webkit-scrollbar {
+         display: none;
+      }
    }
 </style>
 
