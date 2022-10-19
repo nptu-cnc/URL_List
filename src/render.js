@@ -26,9 +26,13 @@ const list = {
         }
     },
     methods: {
-        search() {
-            let search = document.querySelector("#search");
-            this.keyword = search.value;
+        showRow(data){
+            for(let i in data){
+                if(String(data[i]).includes(this.keyword)){
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

@@ -19,7 +19,7 @@
         <div class="col-lg-12" v-for="(row,rowIndex) in jsonData">
             <div class="row" style="text-align:center;font-size:1.5em;margin:10px;">
                 {{row.unit}}
-                <input id="search"  placeholder="Search" type="text" @input="search()" v-if="rowIndex==0" >
+                <input id="search"  placeholder="Search" type="text" v-model.value="keyword" v-if="rowIndex==0" >
            </div>
            <div class="row-cnc title">
               <div class="serial">序號</div>
@@ -31,7 +31,7 @@
               <div class="note">備註</div>
            </div>
            <div v-for="(site,siteIndex) in row.site">
-              <div class="row-cnc" :class="site[0]" v-if="site[2].includes(keyword)">
+              <div class="row-cnc" :class="site[0]" v-if="showRow(site)">
                  <div class="serial">{{site[1]}}</div>
                  <div class="siteName">{{site[2]}}</div>
                  <div class="siteURL">
@@ -60,6 +60,7 @@
      
         </div>
      </div>
+
      <style>
         .row-cnc {
            display: flex;
