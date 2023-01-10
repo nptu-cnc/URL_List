@@ -6,9 +6,7 @@
     * [更新網站內容](#更新網站內容)
         * [新增](#新增)
         * [刪除](#刪除)
-* [component.html](#componenthtml)
-* [render.js](#renderjs)
-* [vue.global.min.js](#vueglobalminjs)
+* [檔案功能表](#檔案功能表)
 
 ## maintainer.json
 
@@ -117,6 +115,7 @@
 ```
 ![1](./image/images.gif)
 
+# 檔案功能表
 |資料夾名稱|檔案名稱|功能|
 |:--:|:--:|:--:|
 |image||存放示範用的圖檔|
