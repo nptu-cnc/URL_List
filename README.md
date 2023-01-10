@@ -117,9 +117,12 @@
 ```
 ![1](./image/images.gif)
 
-## component.html
-component.html是vue.js用來生成前端html時所需要的程式碼。
-## render.js
-render.js是vue.js在執行過程中用來配置資源的controller，此架構為常見的MVC架構，也就是Model、View、Controller。
-## vue.global.min.js
-vue.global.min.js為vue.js的本體，此檔案為經編譯及最小化後的js檔。
+|資料夾名稱|檔案名稱|功能|
+|:--:|:--:|:--:|
+|image||存放示範用的圖檔|
+|old||存放舊版檔案|
+|src|componenet.html|用來規定vue的模板
+||maintainer.json|所有資料
+||Preview.html|預覽用的html檔
+||render.js|定義頁面中的元件功能
+||vue.global.min.js|vue的本體
