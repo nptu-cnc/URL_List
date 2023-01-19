@@ -119,7 +119,6 @@
 |資料夾名稱|檔案名稱|功能|
 |:--:|:--:|:--:|
 |image||存放示範用的圖檔|
-|old||存放舊版檔案|
 |src|componenet.html|用來規定vue的模板
 ||maintainer.json|所有資料
 ||Preview.html|預覽用的html檔
