@@ -74,6 +74,26 @@
             ],
             [
                 "site-tb",
+                "E045",
+                "校友服務組",
+                "alumni.nptu.edu.tw",
+                ["沈郁娟"],
+                ["f0911728@mail.nptu.edu.tw"],
+                ["16306"],
+                ""
+            ],
+            [
+                "site-tb",
+                "E046",
+                "校友之家",
+                "hoa.nptu.edu.tw",
+                ["吳茉朱"],
+                ["mochu@mail.nptu.edu.tw"],
+                ["16305"],
+                ""
+            ],
+            [
+                "site-tb",
                 "E007",
                 "性別平等教育委員會",
                 "geec.nptu.edu.tw ",
@@ -140,36 +160,6 @@
                 ["楊雅淇"],
                 ["yachi@mail.nptu.edu.tw"],
                 ["11601"],
-                ""
-            ],
-            [
-                "site-tb",
-                "E015",
-                "推廣教育中心",
-                "cec.nptu.edu.tw",
-                ["蔡宛妤"],
-                ["ariel0811@mail.nptu.edu.tw"],
-                ["18104"],
-                ""
-            ],
-            [
-                "site-tb",
-                "E016",
-                "專案業務組",
-                "pos.nptu.edu.tw",
-                ["陳崑屏"],
-                ["allen57.chen@mail.nptu.edu.tw"],
-                ["18003"],
-                ""
-            ],
-            [
-                "site-tb",
-                "E017",
-                "進修教學組",
-                "aas.nptu.edu.tw",
-                ["李玉潔"],
-                ["luj@mail.nptu.edu.tw"],
-                ["18204"],
                 ""
             ],
             [
@@ -415,7 +405,7 @@
             [
                 "site-tb m-site",
                 "E043",
-                "實習就業輔導處",
+                "職涯發展暨教育推廣處",
                 "ica.nptu.edu.tw",
                 ["張惠美"],
                 ["tipos@mail.nptu.edu.tw"],
@@ -425,7 +415,7 @@
             [
                 "site-tb",
                 "E044",
-                "職涯發展與輔導組",
+                "職涯輔導組",
                 "career.nptu.edu.tw",
                 ["吳碧如"],
                 ["anna@mail.nptu.edu.tw"],
@@ -434,22 +424,32 @@
             ],
             [
                 "site-tb",
-                "E045",
-                "校友服務組",
-                "alumni.nptu.edu.tw",
-                ["沈郁娟"],
-                ["f0911728@mail.nptu.edu.tw"],
-                ["16306"],
+                "E015",
+                "推廣教育中心",
+                "cec.nptu.edu.tw",
+                ["蔡宛妤"],
+                ["ariel0811@mail.nptu.edu.tw"],
+                ["18104"],
                 ""
             ],
             [
                 "site-tb",
-                "E046",
-                "校友之家",
-                "hoa.nptu.edu.tw",
-                ["吳茉朱"],
-                ["mochu@mail.nptu.edu.tw"],
-                ["16305"],
+                "E016",
+                "招生組",
+                "pos.nptu.edu.tw",
+                ["陳崑屏"],
+                ["allen57.chen@mail.nptu.edu.tw"],
+                ["18003"],
+                ""
+            ],
+            [
+                "site-tb",
+                "E017",
+                "進修教學組",
+                "aas.nptu.edu.tw",
+                ["李玉潔"],
+                ["luj@mail.nptu.edu.tw"],
+                ["18204"],
                 ""
             ],
             [
