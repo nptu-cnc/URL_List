@@ -708,16 +708,6 @@
                 ""
             ],
             [
-                "site-tb",
-                "E164",
-                "正念教育中心",
-                "nptumindfulness.nptu.edu.tw",
-                ["張曉君(心輔系)"],
-                ["changhc@mail.nptu.edu.tw"],
-                ["31302"],
-                ""
-            ],
-            [
                 "site-tb m-site",
                 "E070",
                 "資訊學院",
@@ -1500,6 +1490,26 @@
                 ["王俊傑"],
                 ["jie809@mail.nptu.edu.tw"],
                 ["33352"],
+                ""
+            ],
+            [
+                "site-tb m-site",
+                "E164",
+                "正念教育中心",
+                "nptumindfulness.nptu.edu.tw",
+                ["張曉君(心輔系)"],
+                ["changhc@mail.nptu.edu.tw"],
+                ["31302"],
+                ""
+            ],
+            [
+                "site-tb m-site",
+                "E167",
+                "屏大形象頁",
+                "nptumindfulness.nptu.edu.tw",
+                ["吳崟愷"],
+                ["abelwu@mail.nptu.edu.tw"],
+                ["21203"],
                 ""
             ]
         ]
