@@ -383,26 +383,6 @@
                 ""
             ],
             [
-                "site-tb",
-                "E041",
-                "東南亞發展中心",
-                "sadc.nptu.edu.tw",
-                ["李盈穎"],
-                ["lee@mail.nptu.edu.tw"],
-                ["17402","24001"],
-                ""
-            ],
-            [
-                "site-tb",
-                "E042",
-                "華語教學中心",
-                "clc.nptu.edu.tw",
-                ["楊瑋銘"],
-                ["wmyang@mail.nptu.edu.tw"],
-                ["24002"],
-                ""
-            ],
-            [
                 "site-tb m-site",
                 "E043",
                 "職涯發展暨教育推廣處",
@@ -610,7 +590,7 @@
             [
                 "site-tb",
                 "E061",
-                "商業自動化與管理學系",
+                "商業大數據學系",
                 "cam.nptu.edu.tw",
                 ["李書華"],
                 ["cam@mail.nptu.edu.tw"],
@@ -690,7 +670,7 @@
             [
                 "site-tb",
                 "E159",
-                "大數據商務應用學士學位學程",
+                "大數據商務應用學士學位學程(113學年停招)",
                 "bigdata.nptu.edu.tw",
                 ["吳彩容"],
                 ["jctr759@mail.nptu.edu.tw"],
@@ -768,6 +748,16 @@
                 ""
             ],
             [
+                "site-tb",
+                "E077",
+                "國際資訊科技與應用碩士學位學程",
+                "iita.nptu.edu.tw",
+                ["邱瑋苓"],
+                ["skypink10@mail.nptu.edu.tw"],
+                ["34006"],
+                ""
+            ],
+            [
                 "site-tb m-site",
                 "E078",
                 "教育學院",
@@ -835,6 +825,16 @@
                 ["劉亭瑜"],
                 ["tingyu@mail.nptu.edu.tw"],
                 ["31004"],
+                ""
+            ],
+            [
+                "site-tb",
+                "E137",
+                "STEM教育國際碩士學位學程",
+                "stem.nptu.edu.tw",
+                ["雲永仁"],
+                ["john8024@mail.nptu.edu.tw"],
+                ["36001"],
                 ""
             ],
             [
@@ -1002,9 +1002,9 @@
                 "E102",
                 "理學院",
                 "science.nptu.edu.tw",
-                ["王恩慈","沈佳蓉"],
-                ["judy@mail.nptu.edu.tw","jinn@mail.nptu.edu.tw"],
-                ["33002","33004"],
+                ["鍾文婷","王恩慈"],
+                ["ting554@mail.nptu.edu.tw","judy@mail.nptu.edu.tw"],
+                ["33001","33002"],
                 ""
             ],
             [
@@ -1062,9 +1062,9 @@
                 "E111",
                 "理學院應用科學國際博士班",
                 "asiphd.nptu.edu.tw",
-                ["王恩慈","沈佳蓉"],
-                ["judy@mail.nptu.edu.tw","jinn@mail.nptu.edu.tw"],
-                ["33002","33004"],
+                ["鍾文婷"],
+                ["ting554@mail.nptu.edu.tw"],
+                ["33001"],
                 ""
             ],
             [
@@ -1082,9 +1082,9 @@
                 "E157",
                 "理學院應用科學國際碩士班",
                 "asims.nptu.edu.tw",
-                ["王恩慈","沈佳蓉"],
-                ["judy@mail.nptu.edu.tw","jinn@mail.nptu.edu.tw"],
-                ["33002","33004"],
+                ["鍾文婷"],
+                ["ting554@mail.nptu.edu.tw"],
+                ["33001"],
                 ""
             ],
             [
@@ -1099,22 +1099,22 @@
             ],
             [
                 "site-tb",
-                "E137",
-                "STEM教育國際碩士學位學程",
-                "stem.nptu.edu.tw",
-                ["雲永仁"],
-                ["john8024@mail.nptu.edu.tw"],
-                ["36001"],
+                "E041",
+                "東南亞發展中心",
+                "sadc.nptu.edu.tw",
+                ["李盈穎"],
+                ["lee@mail.nptu.edu.tw"],
+                ["17402","24001"],
                 ""
             ],
             [
                 "site-tb",
-                "E077",
-                "國際資訊科技與應用碩士學位學程",
-                "iita.nptu.edu.tw",
-                ["邱瑋苓"],
-                ["skypink10@mail.nptu.edu.tw"],
-                ["34006"],
+                "E042",
+                "華語教學中心",
+                "clc.nptu.edu.tw",
+                ["楊瑋銘"],
+                ["wmyang@mail.nptu.edu.tw"],
+                ["24002"],
                 ""
             ],
             [
