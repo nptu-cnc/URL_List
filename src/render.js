@@ -2,7 +2,7 @@
 const list = {
     data() {
         return {
-            test: "Hello World",
+            test: "Hello_World",
             initial: false,
             isClick: [],
             jsonData: [],
